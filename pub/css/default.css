@@ -1,0 +1,23 @@
+body{
+    background-color:gray;
+}
+
+*{
+    font-family: 'Noto Serif KR', serif;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 30px;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+#hadan{
+    font-size:x-small;
+    color: whitesmoke;
+    text-align: center;
+}
