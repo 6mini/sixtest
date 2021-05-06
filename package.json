@@ -1,6 +1,6 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
+  "name": "test6mini",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node node app.js",
