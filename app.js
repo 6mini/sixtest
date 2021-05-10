@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = PORT;
+// const port = PORT;
 const port = process.env.PORT;
 const http = require('http');
 const fs = require('fs');
