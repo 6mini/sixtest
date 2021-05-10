@@ -1,3 +1,0 @@
-User-agent: *
-Allow:/
-Sitemap: http://sixtest.herokuapp.com/sitemap.xml

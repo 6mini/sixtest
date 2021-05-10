@@ -7,6 +7,12 @@ const fs = require('fs');
 const url = require('url');
 const bodyParser = require('body-parser');
 
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(
+    "User-agent: *\nAllow:/\n"
+  );
+});
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/pub/html/app.html')
