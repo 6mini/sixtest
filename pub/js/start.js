@@ -5,28 +5,56 @@ const result = document.querySelector("#result")
 const select = [];
 let resultword = [];
 
-var copyBtn = document.getElementById("copyBtn");
-            // 버튼 클릭 이벤트
-            copyBtn.addEventListener("click", function(){
-               // 복사할 텍스트를 변수에 할당해줍니다.
-                var text = document.getElementById("textDiv").innerText;
-                // input text 태그를 생성해줍니다.
-                var createInput = document.createElement("input");
-                createInput.setAttribute("type", "text");
-                // 가상으로 가져올 태그에 만들어준 input 태그를 붙여줍니다.
-                document.getElementById("textDiv").appendChild(createInput);
-                // 만든 input 태그의 value 값에 복사할 텍스트 값을 넣어줍니다.
-                createInput.value = text;
-                // 복사 기능을 수행한 후
-                createInput.select();
-                document.execCommand('copy');
-                // 가상으로 붙여주었던 input 태그를 제거해줍니다.
-                document.getElementById("textDiv").removeChild(createInput);
-                alert('복사가 완료되었습니다.');
-            });
+
+
+// 클립보드로 복사하는 기능
+function copyToClipboard(elementId) {
+  var aux = document.createElement("input");
+  aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+  alert('복사가 완료되었습니다.');
+}
 
 function goMbtiresult(mbti){
-location.href='/job/'+mbti;
+    if (mbti === 'enfp') {
+    location.href='/job/designer';
+    } if (mbti === 'enfj') {
+        location.href='/job/teacher';
+    } if (mbti === 'infp') {
+        location.href='/job/author';
+    } if (mbti === 'infj') {
+        location.href='/job/psychologist';
+
+    } if (mbti === 'entp') {
+        location.href='/job/architect';
+    } if (mbti === 'entj') {
+        location.href='/job/broker';
+    } if (mbti === 'intp') {
+        location.href='/job/programmer';
+    } if (mbti === 'intj') {
+        location.href='/job/expert';
+
+    } if (mbti === 'estj') {
+        location.href='/job/agent';
+    } if (mbti === 'esfj') {
+        location.href='/job/promotion';
+    } if (mbti === 'istj') {
+        location.href='/job/official';
+    } if (mbti === 'isfj') {
+        location.href='/job/therapist';
+
+    } if (mbti === 'estp') {
+        location.href='/job/police';
+    } if (mbti === 'esfp') {
+        location.href='/job/comedian';
+    } if (mbti === 'istp') {
+        location.href='/job/pilot';
+    } if (mbti === 'isfp') {
+        location.href='/job/cook';
+    }
 }
 
 function calResult(){
@@ -100,7 +128,7 @@ function calResult(){
             resultword.push(pj[i].name);
         }
     }
-    const mbti = resultword.join();
+    const mbti = resultword.join().replace(',','').replace(',','').replace(',','');
     goMbtiresult(mbti);
 }
 
