@@ -6,9 +6,9 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const bodyParser = require('body-parser');
-const favicon = require('serve-favicon');
+let favicon = require('serve-favicon');
 
-app.use(favicon(path.join(__dirname, '.', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'pub/img', 'favicon.ico')));
 
 app.get("/robots.txt", (req, res) => {
   res.type("text/plain");
