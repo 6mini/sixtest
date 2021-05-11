@@ -7,6 +7,7 @@ const fs = require('fs');
 const url = require('url');
 const bodyParser = require('body-parser');
 let favicon = require('serve-favicon');
+var path = require('path')
 
 app.use(favicon(path.join(__dirname, 'pub/img', 'favicon.ico')));
 
