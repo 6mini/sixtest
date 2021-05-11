@@ -1,11 +1,14 @@
 const express = require('express')
 const app = express()
-// const port = PORT;
-const port = process.env.PORT;
+const port = 3000;
+// const port = process.env.PORT;
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const bodyParser = require('body-parser');
+const favicon = require('serve-favicon');
+
+app.use(favicon(path.join(__dirname, '.', 'favicon.ico')));
 
 app.get("/robots.txt", (req, res) => {
   res.type("text/plain");
