@@ -14,7 +14,7 @@ app.use(favicon(path.join(__dirname, 'pub/img', 'favicon.ico')));
 app.get("/robots.txt", (req, res) => {
   res.type("text/plain");
   res.send(
-    "User-agent: *\nAllow:/\n"
+    "User-agent: *\nAllow:\n"
   );
 });
 
