@@ -1,0 +1,19 @@
+body{
+    background-color:gray;
+    
+}
+
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* h1{
+    font-weight: 900;
+    font-size: 30px;
+} */
+
+title{
+    background-color: whitesmoke;
+    width: 95%;
+    text-align: center;
+}

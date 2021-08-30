@@ -3,7 +3,7 @@ body{
 }
 
 *{
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Noto Serif KR', sans-serif;
 }
 
 h1{
@@ -21,3 +21,9 @@ h1{
     color: whitesmoke;
     text-align: center;
 }
+
+/* #cont{
+    background-color: whitesmoke;
+    width: 95%;
+    text-align: center;
+} */
