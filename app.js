@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
-// const port = 3000;
-const port = process.env.PORT;
+const port = 3000;
+// const port = process.env.PORT;
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
@@ -116,9 +116,6 @@ app.get('/mg/ru', (req, res) => {
 
 app.get('/ai', (req, res) => {
   res.sendFile(__dirname + '/pub/html/ai/index.html')
-});
-app.get('/ai2', (req, res) => {
-  res.sendFile(__dirname + '/pub/html/ai/index2.html')
 });
 
 
